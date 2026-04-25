@@ -1,0 +1,18 @@
+name: nanopore-pipeline
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  - nextflow=23.10.0
+  - nanoplot=1.41.0
+  - porechop=0.2.4
+  - chopper=0.7.0
+  - flye=2.9.2
+  - medaka=1.11.0
+  - quast=5.2.0
+  - phanotate
+  - blast
+  - multiqc=1.19
+  - openjdk=17
+  - tensorflow

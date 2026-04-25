@@ -1,0 +1,9 @@
+*.faa filter=lfs diff=lfs merge=lfs -text
+*.fastq filter=lfs diff=lfs merge=lfs -text
+*.psq filter=lfs diff=lfs merge=lfs -text
+*.phr filter=lfs diff=lfs merge=lfs -text
+*.faa.* filter=lfs diff=lfs merge=lfs -text
+*.tsv filter=lfs diff=lfs merge=lfs -text
+results/** filter=lfs diff=lfs merge=lfs -text
+custom_db/** filter=lfs diff=lfs merge=lfs -text
+blast_db/** filter=lfs diff=lfs merge=lfs -text

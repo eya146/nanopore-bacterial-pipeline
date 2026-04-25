@@ -1,0 +1,14 @@
+# Large files (not for git)
+custom_db/
+blast_db/
+results/
+*.fastq
+*.fastq.gz
+*.faa
+*.psq
+*.phr
+*.pin
+*.pdb
+conda_envs/
+work/
+.nextflow/
