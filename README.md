@@ -6,16 +6,21 @@
 
 A Nextflow pipeline for assembly and characterization of phage genomes from mixed Nanopore sequencing data.
 
-## Results Summary
+## System Requirements
 
-| Metric | Value |
-|--------|-------|
-| Complete phage genome | 58.8 kb, circular, 714x coverage |
-| Total contigs assembled | 5 |
-| Predicted proteins | 563 |
-| Viral BLAST hits | 233 |
-| Assembly quality | N50 = total length, 0 N's |
-| Read N50 | 14.4 kb |
+| Resource | Minimum | Recommended |
+|----------|---------|-------------|
+| **CPUs** | 4 cores | 8+ cores |
+| **RAM** | 16 GB | 32+ GB |
+| **Disk space** | 20 GB | 50 GB |
+
+### GitHub Codespace Requirements
+
+For successful assembly with Flye, use a **4-core Codespace** with at least **16 GB RAM**:|
+
+#### Alternative for 2-core / Low Memory:
+
+If using a 2-core Codespace or limited resources, use **Raven** instead of Flye:
 
 ## Phage Species Identified
 
