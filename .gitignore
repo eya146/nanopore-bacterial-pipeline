@@ -13,3 +13,10 @@ conda_envs/
 work/
 .nextflow/
 results/
+venv/
+results/
+custom_db/
+blast_db/
+work/
+.nextflow/
+conda_envs/
