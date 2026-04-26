@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phage Assembly Pipeline Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #3498db; color: white; }
+        .metric { font-weight: bold; color: #27ae60; }
+        .summary { background-color: #f8f9fa; padding: 20px; border-radius: 5px; }
+        code { background-color: #f4f4f4; padding: 2px 5px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>Nanopore Phage-Bacteria Assembly Pipeline</h1>
+    <p><strong>Author:</strong> Evangelia Sklaveniti</p>
+    <p><strong>Date:</strong> April 2026</p>
+
+    <h2>Methods</h2>
+    
+    <h3>Pipeline Overview</h3>
+    <p>The pipeline follows a standard genome assembly and annotation workflow:</p>
+    <ol>
+        <li><strong>Quality Control:</strong> NanoPlot for read quality assessment</li>
+        <li><strong>Adapter Trimming:</strong> Porechop removes adapters</li>
+        <li><strong>Read Filtering:</strong> Chopper filters short/low-quality reads</li>
+        <li><strong>Assembly:</strong> Flye (--meta mode) for metagenomic assembly</li>
+        <li><strong>Polishing:</strong> Medaka corrects sequencing errors</li>
+        <li><strong>Assembly QC:</strong> QUAST evaluates assembly metrics</li>
+        <li><strong>Gene Prediction:</strong> PHANOTATE predicts phage genes</li>
+        <li><strong>Annotation:</strong> BLAST against viral and bacterial databases</li>
+    </ol>
+
+    <h3>Tools and Versions</h3>
+    <table>
+        <tr><th>Tool</th><th>Version</th><th>Purpose</th></tr>
+        <tr><td>Nextflow</td><td>23.10.0</td><td>Workflow manager</td></tr>
+        <tr><td>NanoPlot</td><td>1.41.0</td><td>Read QC</td></tr>
+        <tr><td>Flye</td><td>2.9.2</td><td>Genome assembly</td></tr>
+        <tr><td>Medaka</td><td>1.11.0</td><td>Polishing</td></tr>
+        <tr><td>QUAST</td><td>5.2.0</td><td>Assembly QC</td></tr>
+        <tr><td>PHANOTATE</td><td>1.6.7</td><td>Gene prediction</td></tr>
+        <tr><td>BLAST</td><td>2.15.0</td><td>Protein annotation</td></tr>
+    </table>
+
+    <h2>Results</h2>
+
+    <h3>Complete Phage Genome</h3>
+    <div class="summary">
+        <p><strong>Contig_1</strong> was identified as a <span class="metric">complete circular phage genome</span>:</p>
+        <ul>
+            <li>Length: <strong>58.8 kb</strong></li>
+            <li>Coverage: <strong>714x</strong></li>
+            <li>Circular: <strong>Yes</strong></li>
+            <li>Gaps: <strong>0</strong></li>
+        </ul>
+    </div>
+
+    <h3>Assembly Statistics (QUAST)</h3>
+    <table>
+        <tr><th>Metric</th><th>Value</th></tr>
+        <tr><td>Number of contigs</td><td>5</td></tr>
+        <tr><td>Largest contig</td><td>58,829 bp</td></tr>
+        <tr><td>Total length</td><td>188,495 bp</td></tr>
+        <tr><td>N50</td><td>41,086 bp</td></tr>
+        <tr><td>N's per 100 kbp</td><td>0</td></tr>
+    </table>
+
+    <h3>Gene Prediction (PHANOTATE)</h3>
+    <ul>
+        <li>Total predicted proteins: <strong>542</strong></li>
+    </ul>
+
+    <h3>Functional Annotation (BLAST)</h3>
+    <ul>
+        <li>Viral BLAST hits: <strong>233</strong></li>
+        <li>Bacterial BLAST hits: <strong>14</strong> (Staphylococcus/Streptococcus)</li>
+    </ul>
+
+    <h3>Read Quality (NanoPlot)</h3>
+    <table>
+        <tr><th>Metric</th><th>Value</th></tr>
+        <tr><td>Total reads</td><td>5,251</td></tr>
+        <tr><td>Total bases</td><td>50.8 Mb</td></tr>
+        <tr><td>Read N50</td><td>14.4 kb</td></tr>
+        <tr><td>Mean quality (Q-score)</td><td>13.1</td></tr>
+    </table>
+
+    <h2>Conclusions</h2>
+    <ul>
+        <li>The pipeline successfully assembled a complete, circular 58.8 kb phage genome</li>
+        <li>High coverage (714x) and zero gaps confirm assembly quality</li>
+        <li>PHANOTATE predicted 542 proteins, BLAST identified 233 viral hits</li>
+        <li>The pipeline is reproducible via conda and Nextflow</li>
+    </ul>
+
+    <h2>Availability</h2>
+    <p>Code and documentation: <a href="https://github.com/eya146/nanopore-bacterial-pipeline">github.com/eya146/nanopore-bacterial-pipeline</a></p>
+
+</body>
+</html>
