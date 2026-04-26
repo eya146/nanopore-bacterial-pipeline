@@ -1,7 +1,6 @@
 # Large files (not for git)
 custom_db/
 blast_db/
-results/
 *.fastq
 *.fastq.gz
 *.faa
@@ -12,15 +11,13 @@ results/
 conda_envs/
 work/
 .nextflow/
-results/
 venv/
-results/
 custom_db/
 blast_db/
 work/
 .nextflow/
 conda_envs/
 venv/
-results/
 custom_db/
 blast_db/
+.nextflow.log*
