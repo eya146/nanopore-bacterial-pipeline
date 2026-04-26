@@ -1,5 +1,6 @@
 process CHOPPER {
     tag "Chopper"
+    conda "bioconda::chopper=0.7.0"
     
     input:
     path reads
@@ -12,9 +13,9 @@ process CHOPPER {
     
     script:
     """
-    # Count original reads
-      original_reads=$(($(wc -l < ${reads}) / 4))
-      filtered_reads=$(($(wc -l < filtered.fastq) / 4))
+    # Count original reads (lines/4)
+    original_reads=\$(($(wc -l < ${reads}) / 4))
+    original_bases=\$(awk 'NR%4==2 {sum+=length(\$0)} END {print sum}' ${reads})
     
     # Filter reads
     chopper \\
@@ -23,8 +24,8 @@ process CHOPPER {
         < ${reads} \\
         > filtered.fastq
     
-    # Count filtered reads
-    filtered_reads=\$(grep -c "^@" filtered.fastq)
+    # Count filtered reads (lines/4 - more reliable than grep ^@)
+    filtered_reads=\$(($(wc -l < filtered.fastq) / 4))
     filtered_bases=\$(awk 'NR%4==2 {sum+=length(\$0)} END {print sum}' filtered.fastq)
     
     # Save statistics
