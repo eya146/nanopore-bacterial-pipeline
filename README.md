@@ -20,7 +20,46 @@ For successful assembly with Flye, use a **4-core Codespace** with at least **16
 
 #### Alternative for 2-core / Low Memory:
 
-If using a 2-core Codespace or limited resources, use **Raven** instead of Flye:
+If using a 2-core Codespace or limited resources, use **Raven** instead of Flye
+
+## Results Summary
+
+| Category | Metric | Value |
+|----------|--------|-------|
+| **Complete Phage Genome** | Length | 58.8 kb |
+| | Coverage | 714x |
+| | Circular | Yes |
+| | Contig | contig_1 |
+| **Assembly Statistics** | Number of contigs | 5 |
+| | Largest contig | 58,829 bp |
+| | Total length | 188,495 bp |
+| | N50 | 41,086 bp |
+| | L50 | 2 |
+| | N's per 100 kbp | 0 |
+| **Gene Prediction** | Total predicted proteins | 542 |
+| **Viral Annotation** | Total viral hits | 233 |
+| | Vibrio phages | 45+ |
+| | Klebsiella phages | 25+ |
+| | Salmonella phages | 20+ |
+| | Pseudomonas phages | 18+ |
+| | Other genera | 125+ |
+| **Bacterial Annotation** | Total bacterial hits | 14 |
+| | Staphylococcus aureus | 11 |
+| | Streptococcus pneumoniae | 3 |
+| **Key Proteins Identified** | DNA polymerase I | Replication |
+| | DNA methyltransferase | Modification |
+| | Terminase (large/small) | DNA packaging |
+| | Portal protein | Head assembly |
+| | Major capsid protein | Head structure |
+| | Major tail protein | Tail structure |
+| | Endolysin | Host lysis |
+| | Integrase | Integration |
+| **Read Quality** | Total reads | 5,251 |
+| | Total bases | 50.8 Mb |
+| | Mean read length | 9.7 kb |
+| | Read N50 | 14.4 kb |
+| | Mean quality (Q-score) | 13.1 |
+| | Max read length | 255 kb |
 
 ## Phage Species Identified
 
@@ -40,15 +79,6 @@ BLAST annotation revealed matches to phages infecting the following genera:
 | **Proteus** | 3+ | Proteus phage VB_PmiS-Isfahan |
 | **Aeromonas** | 2+ | Aeromonas phage 2L372X |
 | **Erwinia** | 2+ | Erwinia phage Hena1 |
-
-**Key phage proteins identified:**
-- DNA polymerase I (replication)
-- DNA methyltransferase (modification)
-- Terminase large subunit (DNA packaging)
-- Portal protein (head assembly)
-- Major capsid protein (head structure)
-- Major tail protein (tail structure)
-- Endolysin (host lysis)
 
 ## Pipeline Overview
 FASTQ → NanoPlot → Porechop → Chopper → Flye → Medaka → QUAST → PHANOTATE → BLAST → MultiQC
