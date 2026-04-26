@@ -13,7 +13,8 @@ process BLAST_ANNOTATION {
     """
     # Use parameterized database paths
     blastp -query ${proteins} \
-        -db ${params.staph_strep_db} \
+        -db /workspaces/nanopore-bacterial-pipeline/custom_db/staph_strep_db.faa \
+        -dbtype prot \
         -out blast_results.tsv \
         -outfmt "6 qseqid sseqid pident length evalue stitle" \
         -max_target_seqs 1 \
