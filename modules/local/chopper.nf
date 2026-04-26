@@ -13,10 +13,10 @@ process CHOPPER {
     
     script:
     """
-    # Count original reads (lines/4)
-    original_reads=\$(($(wc -l < ${reads}) / 4))
-    original_bases=\$(awk 'NR%4==2 {sum+=length(\$0)} END {print sum}' ${reads})
-    
+    total_lines=`wc -l < ${reads}`
+    original_reads=\$(( total_lines / 4 ))
+    original_bases=`awk 'NR%4==2 {sum+=length(\$0)} END {print sum}' ${reads}`
+
     # Filter reads
     chopper \\
         -l ${min_length} \\
@@ -25,8 +25,8 @@ process CHOPPER {
         > filtered.fastq
     
     # Count filtered reads (lines/4 - more reliable than grep ^@)
-    filtered_reads=\$(($(wc -l < filtered.fastq) / 4))
-    filtered_bases=\$(awk 'NR%4==2 {sum+=length(\$0)} END {print sum}' filtered.fastq)
+    filtered_reads=\$(( `wc -l < filtered.fastq` / 4 ))
+    filtered_bases=`awk 'NR%4==2 {sum+=length(\$0)} END {print sum}' filtered.fastq`
     
     # Save statistics
     cat > chopper_stats.txt << _STATS_
