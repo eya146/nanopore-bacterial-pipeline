@@ -5,7 +5,7 @@ channels:
 dependencies:
   - python=3.10
   - nextflow=23.10.0
-  - nanoplot=1.41.0
+  - nanoplot=1.46.2
   - porechop=0.2.4
   - chopper=0.7.0
   - flye=2.9.2
@@ -19,3 +19,4 @@ dependencies:
     - plotly==5.17.0
     - kaleido==0.2.1
     - "setuptools<82" 
+ 
