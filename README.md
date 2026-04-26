@@ -26,12 +26,12 @@ If using a 2-core Codespace or limited resources, use **Raven** instead of Flye
 
 | Category | Metric | Value |
 |----------|--------|-------|
-| **Complete Phage Genome** | Length | 58.8 kb |
-| | Coverage | 714x |
+| **Complete Phage Genome** | Length | 61.8 kb kb |
+| | Coverage | 699x |
 | | Circular | Yes |
 | | Contig | contig_1 |
 | **Assembly Statistics** | Number of contigs | 5 |
-| | Largest contig | 58,829 bp |
+| | Largest contig | 61,841 bp |
 | | Total length | 188,495 bp |
 | | N50 | 41,086 bp |
 | | L50 | 2 |
