@@ -14,8 +14,8 @@ dependencies:
   - multiqc=1.19
   - openjdk=17
   - pip
-  - setuptools
   - phanotate
   - pip:
     - plotly==5.17.0
     - kaleido==0.2.1
+    - "setuptools<82"
