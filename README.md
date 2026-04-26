@@ -76,7 +76,6 @@ text
 - 8 GB RAM (16 GB recommended)
 
 ### Setup
-
 ```bash
 # Clone repository
 git clone https://github.com/eya146/nanopore-bacterial-pipeline.git
@@ -102,9 +101,6 @@ nextflow run main.nf \
 Resume Interrupted Run
 bash
 nextflow run main.nf --input reads.fastq -resume
-Help
-bash
-nextflow run main.nf --help
 Output Structure
 text
 results/
@@ -112,10 +108,10 @@ results/
 ├── PORECHOP/      # Trimmed reads
 ├── CHOPPER/       # Filtered reads
 ├── FLYE/          # Assembly (5 contigs)
-├── MEDAKA/        # Polished assembly (1 contig)
+├── MEDAKA/        # Polished assembly
 ├── QUAST/         # Assembly QC report
 ├── PHANOTATE/     # Gene predictions (563 proteins)
-├── BLAST/         # Protein annotations (233 viral hits)
+├── BLAST/         # Protein annotations (233 viral hits, 14 bacterial hits)
 └── MULTIQC/       # Aggregated report
 Assembly Results
 Initial Assembly (Flye)
@@ -124,16 +120,16 @@ contig_1	58.8 kb	714x	Yes
 contig_2	41.5 kb	4x	No
 contig_3	41.1 kb	5x	No
 contig_4	39.3 kb	4x	No
-contig_8	37.5 kb	2x	Yes
+contig_5	37.5 kb	2x	Yes
 Polished Assembly (Medaka)
-After polishing, only the high-coverage contig (contig_1) was successfully processed, resulting in a single complete circular phage genome.
+After assembly and polishing, contig_1 was identified as the complete circular phage genome (58.8 kb, 714x coverage, 0 gaps). Additional contigs (contig_2-5) represent bacterial host fragments or low-coverage sequences.
 
 Metric	Value
-Number of contigs	1
+Number of contigs	5
 Largest contig	58,830 bp
-Total length	58,830 bp
-N50	58,830 bp
-L50	1
+Total length	187,560 bp
+N50	40,437 bp
+L50	2
 N's per 100 kbp	0
 Read Quality Statistics (NanoPlot)
 Metric	Value
@@ -143,18 +139,8 @@ Mean read length	9.7 kb
 Read length N50	14.4 kb
 Mean quality (Q-score)	13.1
 Max read length	255 kb
-Requirements
-RAM: 8 GB minimum (16 GB recommended)
-
-CPUs: 2-4 cores
-
-Disk: 20 GB free space
-
-Limitations
-Flye assembly requires significant memory (8-16 GB). For low-memory environments, use Raven instead.
 
 Medaka polishing only succeeds for high-coverage contigs (>50x).
-
 
 License
 MIT
