@@ -20,3 +20,7 @@ blast_db/
 work/
 .nextflow/
 conda_envs/
+venv/
+results/
+custom_db/
+blast_db/
