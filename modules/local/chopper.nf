@@ -13,8 +13,8 @@ process CHOPPER {
     script:
     """
     # Count original reads
-    original_reads=\$(grep -c "^@" ${reads})
-    original_bases=\$(awk 'NR%4==2 {sum+=length(\$0)} END {print sum}' ${reads})
+      original_reads=$(($(wc -l < ${reads}) / 4))
+      filtered_reads=$(($(wc -l < filtered.fastq) / 4))
     
     # Filter reads
     chopper \\

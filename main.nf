@@ -22,28 +22,28 @@ params.min_read_length = 500
 params.min_read_quality = 10
 
 // Help and version\
-if (params.help) {\
-    log.info \"\"\"\
-Nanopore Phage-Bacteria Assembly Pipeline v1.0\
-==============================================\
-Usage: nextflow run main.nf --input <fastq>\
-\
+if (params.help) {
+    log.info """
+Nanopore Phage-Bacteria Assembly Pipeline v1.0
+==============================================
+Usage: nextflow run main.nf --input <fastq>
+
 Options:\
-  --input               Input FASTQ file (required)\
-  --outdir              Output directory (default: ./results)\
-  --genome_size         Expected genome size (default: 3m)\
-  --min_read_length     Minimum read length (default: 500)\
-  --min_read_quality    Minimum read quality (default: 10)\
-  --staph_strep_db      Path to Staph/Strep database\
-  --viral_db            Path to viral database\
-  --help                Show this help\
-  --version             Show version\
-\"\"\"\
-    exit 0\
+  --input               Input FASTQ file (required)
+  --outdir              Output directory (default: ./results)
+  --genome_size         Expected genome size (default: 3m)
+  --min_read_length     Minimum read length (default: 500)
+  --min_read_quality    Minimum read quality (default: 10)
+  --staph_strep_db      Path to Staph/Strep database
+  --viral_db            Path to viral database
+  --help                Show this help
+  --version             Show version
+"""
+    exit 0
 }
 if (params.version) {
-    log.info \"Nanopore Phage-Bacteria Assembly Pipeline v1.0\"\
-    exit 0\
+    log.info "Nanopore Phage-Bacteria Assembly Pipeline v1.0"
+    exit 0
 }
 // Validate input
 if (!params.input) {

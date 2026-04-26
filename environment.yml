@@ -11,8 +11,11 @@ dependencies:
   - flye=2.9.2
   - medaka=1.11.0
   - quast=5.2.0
-  - phanotate
-  - blast
   - multiqc=1.19
   - openjdk=17
-  - tensorflow
+  - pip
+  - setuptools
+  - phanotate
+  - pip:
+    - plotly==5.17.0
+    - kaleido==0.2.1
