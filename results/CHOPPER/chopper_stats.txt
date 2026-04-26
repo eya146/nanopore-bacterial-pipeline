@@ -1,0 +1,11 @@
+Filtering Statistics
+===================
+Min length: 500
+Min quality: 10
+
+Original reads: 5262
+Filtered reads: 5127
+Reads removed: 135
+
+Original bases: 50786168
+Filtered bases: 50748107
