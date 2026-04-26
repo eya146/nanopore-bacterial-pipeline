@@ -12,3 +12,4 @@ results/
 conda_envs/
 work/
 .nextflow/
+results/
