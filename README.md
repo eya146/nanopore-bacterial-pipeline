@@ -106,14 +106,27 @@ text
 - 8 GB RAM (16 GB recommended)
 
 ### Setup
+
 ```bash
 # Clone repository
 git clone https://github.com/eya146/nanopore-bacterial-pipeline.git
 cd nanopore-bacterial-pipeline
 
+# Initialize conda (first time only)
+conda init bash
+source ~/.bashrc
+
 # Create conda environment
 conda env create -f environment.yml
+
+# Activate environment
 conda activate nanopore-pipeline
+
+# If activation fails, use:
+# source /opt/conda/etc/profile.d/conda.sh && conda activate nanopore-pipeline
+
+# Run pipeline
+nextflow run main.nf --input your_reads.fastq -profile conda
 
 # Run pipeline
 nextflow run main.nf --input your_reads.fastq -profile conda
