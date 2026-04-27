@@ -38,11 +38,9 @@ If using a 2-core Codespace or limited resources, use **Raven** instead of Flye
 | | N's per 100 kbp | 0 |
 | **Gene Prediction** | Total predicted proteins | 542 |
 | **Viral Annotation** | Total viral hits | 233 |
-| | Vibrio phages | 45+ |
-| | Klebsiella phages | 25+ |
-| | Salmonella phages | 20+ |
-| | Pseudomonas phages | 18+ |
-| | Other genera | 125+ |
+| | Vibrio phages | 70 |
+| | Pseudomonas phages | 93 |
+| | Other genera | 60 |
 | **Bacterial Annotation** | Total bacterial hits | 14 |
 | | Staphylococcus aureus | 11 |
 | | Streptococcus pneumoniae | 3 |
