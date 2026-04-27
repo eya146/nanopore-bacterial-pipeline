@@ -190,6 +190,15 @@ nextflow run main.nf \
 Resume Interrupted Run
 bash
 nextflow run main.nf --input reads.fastq -resume
+## Docker Usage
+
+```bash
+# Build the image
+docker build -t nanopore-pipeline .
+
+# Run the pipeline
+docker run --rm -v $(pwd):/workspace nanopore-pipeline run main.nf --input your_reads.fastq -profile docker
+
 Output Structure
 text
 results/
