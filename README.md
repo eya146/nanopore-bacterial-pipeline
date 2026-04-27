@@ -68,18 +68,18 @@ BLAST annotation revealed matches to phages infecting the following genera:
 
 | Genus | Number of hits | Example Phage |
 |-------|----------------|---------------|
-| **Vibrio** | 45+ | Vibrio phage douglas 12A4, Vibrio phage ICP1 |
-| **Klebsiella** | 25+ | Klebsiella phage vB_KpnS-Carvaje |
-| **Salmonella** | 20+ | Salmonella phage vB_SenS_Sasha |
-| **Pseudomonas** | 18+ | Pseudomonas phage PA11, Pseudomonas phage Henninger |
-| **Pseudoalteromonas** | 8+ | Pseudoalteromonas phage Maelstrom |
-| **Edwardsiella** | 5+ | Edwardsiella phage MSW-3 |
-| **Xanthomonas** | 5+ | Xanthomonas phage Xp15 |
-| **Enterococcus** | 3+ | Enterococcus phage phiFL4A |
-| **Bacillus** | 2+ | Bacillus phage IEBH |
-| **Proteus** | 3+ | Proteus phage VB_PmiS-Isfahan |
-| **Aeromonas** | 2+ | Aeromonas phage 2L372X |
-| **Erwinia** | 2+ | Erwinia phage Hena1 |
+| **Pseudomonas** | 93 | Pseudomonas phage PA11, Pseudomonas phage Henninger |
+| **Vibrio** | 70 | Vibrio phage douglas 12A4, Vibrio phage ICP1|
+| **Salmonella** | 13 | Salmonella phage vB_SenS_Sasha |
+| **Klebsiella** | 9 | Klebsiella phage vB_KpnS-Carvaje |
+| **Pseudoalteromonas** | 6 | Pseudoalteromonas phage Maelstrom |
+| **Edwardsiella** | 2 | Edwardsiella phage MSW-3 |
+| **Xanthomonas** | 3 | Xanthomonas phage Xp15 |
+| **Enterococcus** | 1 | Enterococcus phage phiFL4A |
+| **Bacillus** | 1 | Bacillus phage IEBH |
+| **Proteus** | 4 | Proteus phage VB_PmiS-Isfahan |
+| **Aeromonas** | 2 | Aeromonas phage 2L372X |
+| **Erwinia** | 3 | Erwinia phage Hena1 |
 
 ## Pipeline Overview
 FASTQ → NanoPlot → Porechop → Chopper → Flye → Medaka → QUAST → PHANOTATE → BLAST → MultiQC
