@@ -180,7 +180,7 @@ Metric	Value
 Total reads	5,250
 Total bases	50.8 Mb
 Mean read length	9.7 kb
-Read length N50	14.4 kb
+Read length N50	13.6 kb
 Mean quality (Q-score)	14.1
 Max read length	255 kb
 
