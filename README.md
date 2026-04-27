@@ -26,14 +26,14 @@ If using a 2-core Codespace or limited resources, use **Raven** instead of Flye
 
 | Category | Metric | Value |
 |----------|--------|-------|
-| **Complete Phage Genome** | Length | 61.8 kb kb |
+| **Complete Phage Genome** | Length | 61.8  kb |
 | | Coverage | 699x |
 | | Circular | Yes |
 | | Contig | contig_5 |
 | **Assembly Statistics** | Number of contigs | 5 |
 | | Largest contig | 61,841 bp |
-| | Total length | 188,495 bp |
-| | N50 | 41,086 bp |
+| | Total length | 	190,372 bp bp |
+| | N50 | 41,164 bp bp |
 | | L50 | 2 |
 | | N's per 100 kbp | 0 |
 | **Gene Prediction** | Total predicted proteins | 542 |
@@ -55,10 +55,11 @@ If using a 2-core Codespace or limited resources, use **Raven** instead of Flye
 | | Endolysin | Host lysis |
 | | Integrase | Integration |
 | **Read Quality** | Total reads | 5,251 |
+| | Total reads (filtered, ≥500bp, Q≥10) | 5,250 |
 | | Total bases | 50.8 Mb |
 | | Mean read length | 9.7 kb |
 | | Read N50 | 14.4 kb |
-| | Mean quality (Q-score) | 13.1 |
+| | Mean quality (Q-score) | 13.6 |
 | | Max read length | 255 kb |
 
 ## Phage Species Identified
@@ -159,28 +160,28 @@ results/
 Assembly Results
 Initial Assembly (Flye)
 Contig	Length	Coverage	Circular
-contig_1	58.8 kb	714x	Yes
-contig_2	41.5 kb	4x	No
-contig_3	41.1 kb	5x	No
-contig_4	39.3 kb	4x	No
-contig_5	37.5 kb	2x	Yes
+contig_5	61.8 kb	699x	Yes
+contig_3	39.3 kb	4x	No
+contig_4	41.1 kb	5x	No
+contig_1	36.7 kb	4x	No
+contig_2	37.5 kb	2x	Yes
 Polished Assembly (Medaka)
-After assembly and polishing, contig_1 was identified as the complete circular phage genome (58.8 kb, 714x coverage, 0 gaps). Additional contigs (contig_2-5) represent bacterial host fragments or low-coverage sequences.
+After assembly and polishing, contig_1 was identified as the complete circular phage genome (61.8 kb, 699x coverage, 0 gaps). Additional contigs (contig_2-5) represent bacterial host fragments or low-coverage sequences.
 
 Metric	Value
 Number of contigs	5
-Largest contig	58,830 bp
-Total length	187,560 bp
-N50	40,437 bp
+Largest contig	61,841 bp
+Total length	190,372 bp
+N50	41,164 bp
 L50	2
 N's per 100 kbp	0
 Read Quality Statistics (NanoPlot)
 Metric	Value
-Total reads	5,251
+Total reads	5,250
 Total bases	50.8 Mb
 Mean read length	9.7 kb
 Read length N50	14.4 kb
-Mean quality (Q-score)	13.1
+Mean quality (Q-score)	14.1
 Max read length	255 kb
 
 Medaka polishing only succeeds for high-coverage contigs (>50x).
